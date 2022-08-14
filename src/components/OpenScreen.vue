@@ -4,7 +4,7 @@
         <div class="open-text">לפני שנתחיל, תבחרו את הבה"ד שלכם, את הקורס ואת הלומדה שאתם רוצים לכתוב להם שאלות</div>
         <select class="bahad dropdown" name="bahad" v-model="bahad">
             <option value="" disabled selected>מאיזה בה"ד אתם?</option>
-            <option v-for="bahad, key in COURSES" :key="'bahad' + key">{{addSpace(key)}}</option>
+            <option v-for="bahad, key in COURSES" :key="'bahad' + key">{{addSpace(`${this.key}`)}}</option>
         </select>
         <select class="course dropdown" name="course" v-model="course" :disabled="this.bahad? true: ''">
             <option value="" disabled selected>איזה קורס אתם מעבירים?</option>
